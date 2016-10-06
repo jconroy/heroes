@@ -1,5 +1,3 @@
-'use strict';
-
 import path from 'path';
 import { Server } from 'http';
 import Express from 'express';
@@ -23,7 +21,6 @@ app.get('*', (req, res) => {
   match(
     { routes, location: req.url },
     (err, redirectLocation, renderProps) => {
-
       // in case of error display the error message
       if (err) {
         return res.status(500).send(err.message);
@@ -38,13 +35,12 @@ app.get('*', (req, res) => {
       let markup;
       if (renderProps) {
         // if the current route matched we have renderProps
-        markup = renderToString(<RouterContext {...renderProps}/>);
+        markup = renderToString(<RouterContext {...renderProps} />);
       } else {
         // otherwise we can render a 404 page
-        markup = renderToString(<NotFoundPage/>);
+        markup = renderToString(<NotFoundPage />);
         res.status(404);
       }
-
       // render the index template with the embedded React markup
       return res.render('index', { markup });
     }
@@ -54,6 +50,7 @@ app.get('*', (req, res) => {
 // start the server
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';
+
 server.listen(port, err => {
   if (err) {
     return console.error(err);

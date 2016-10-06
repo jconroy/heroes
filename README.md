@@ -1,6 +1,6 @@
 # Heroes
 
-My personalnode and react playground
+My personal node and react playground
 
 ## Installation
 
