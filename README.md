@@ -13,7 +13,7 @@ npm install
 ```
 ## Starting a server
 
-Quickest method is to use (uses babel-node to build on the fly):
+Quickest method is to use:
 
 ```
 npm run start
