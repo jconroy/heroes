@@ -1,5 +1,7 @@
 # Heroes
 
+[![Build Status](https://travis-ci.org/jconroy/heroes.svg?branch=master)](https://travis-ci.org/jconroy/heroes)
+
 My personal node and react playground
 
 ## Installation
