@@ -5,13 +5,13 @@
   "main": "src/server.js",
   "repository": "",
   "scripts": {
-    "postinstall": "npm run build",
     "start": "NODE_ENV=production nodemon src/server.js --exec babel-node",
     "start-dev": "npm run start-dev-hmr",
     "start-dev-single-page": "http-server src/static",
     "start-dev-hmr": "webpack-dev-server --progress --inline --hot",
     "build": "NODE_ENV=production webpack -p && babel src -d build --copy-files",
-    "serve": "nodemon build/server.js"
+    "serve": "nodemon build/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Jason Conroy",
   "license": "MIT",
