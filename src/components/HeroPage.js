@@ -4,7 +4,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import NotFoundPage from './NotFoundPage';
 import HeroesMenu from './HeroesMenu';
-import Flag from './Flag';
 import heroes from '../data/heroes';
 
 export default class HeroPage extends React.Component {
@@ -25,8 +24,8 @@ export default class HeroPage extends React.Component {
             <h2 className="name">{hero.name}</h2>
           </div>
           <section className="description">
-            Olympic medalist from <strong><Flag code={hero.country} showName="true"/></strong>,
-            born in {hero.birth} (Find out more on <a href={hero.link} target="_blank">Wikipedia</a>).
+            <p>First appeared in <strong>{hero.first_appearance}</strong>.</p>
+            <p>Find out more at the <a href={hero.link} target="_blank">Marvel Universe Wiki</a>.</p>
           </section>
         </div>
         <div className="navigateBack">
