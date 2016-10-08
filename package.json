@@ -10,7 +10,7 @@
     "start-dev-single-page": "http-server src/static",
     "start-dev-hmr": "webpack-dev-server --progress --inline --hot",
     "build": "NODE_ENV=production webpack -p && babel src -d build --copy-files",
-    "serve": "nodemon build/server.js",
+    "serve": "nodemon build/server.js"
   },
   "author": "Jason Conroy",
   "license": "MIT",
