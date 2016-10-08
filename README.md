@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/jconroy/heroes.svg?branch=master)](https://travis-ci.org/jconroy/heroes)
 
-My personal node and react playground
+My personal node and react playground.
+
+View the app at [https://hidden-ocean-68398.herokuapp.com/](https://hidden-ocean-68398.herokuapp.com/)
 
 ## Installation
 
