@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "repository": "",
   "scripts": {
+    "postinstall": "npm run build",
     "start": "NODE_ENV=production nodemon src/server.js --exec babel-node",
     "start-dev": "npm run start-dev-hmr",
     "start-dev-single-page": "http-server src/static",
