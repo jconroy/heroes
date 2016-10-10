@@ -36,3 +36,7 @@ Then browse to [http://localhost:3000](http://localhost:3000)
 # Credit
 
 Based off https://github.com/lmammino/judo-heroes
+
+# Notes
+
+* Look into [Jest](http://facebook.github.io/jest/) - seems like it might be a more manageable test framework (but some sites suggest it is slower to run).
