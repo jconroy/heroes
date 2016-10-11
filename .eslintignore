@@ -1,0 +1,3 @@
+build/*
+babel_cache/*
+src/static/*
