@@ -10,7 +10,7 @@
     "start-dev-single-page": "http-server src/static",
     "start-dev-hmr": "webpack-dev-server --progress --inline --hot",
     "build": "NODE_ENV=production webpack -p && babel src -d build --copy-files",
-    "serve": "node build/server.jsx",
+    "serve": "node build/server.js",
     "postinstall": "npm run build",
     "test": "./node_modules/mocha/bin/mocha && ./node_modules/.bin/eslint  --ext .js --ext .jsx src"
   },
