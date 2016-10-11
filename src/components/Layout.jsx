@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export default function Layout(props) {
+function Layout(props) {
   return (
     <div className="app-container">
       <header>
@@ -18,3 +18,9 @@ export default function Layout(props) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: React.PropTypes.node,
+};
+
+export default Layout;

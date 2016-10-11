@@ -53,7 +53,7 @@ const env = process.env.NODE_ENV || 'production';
 
 server.listen(port, (err) => {
   if (err) {
-    return console.error(err);
+    console.error(err);
   }
   console.info(`Server running on http://localhost:${port} [${env}]`);
 });

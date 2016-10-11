@@ -4,9 +4,9 @@ import NotFoundPage from './NotFoundPage';
 import HeroesMenu from './HeroesMenu';
 import heroes from '../data/heroes';
 
-export default function HeroPage(props) {
+function HeroPage(props) {
   const id = props.params.id;
-  const hero = heroes.filter(hero => hero.id === id)[0];
+  const hero = heroes.filter(heroSolo => heroSolo.id === id)[0];
 
   if (!hero) {
     return <NotFoundPage />;
@@ -33,3 +33,9 @@ export default function HeroPage(props) {
     </div>
   );
 }
+
+HeroPage.propTypes = {
+  params: React.PropTypes.node,
+};
+
+export default HeroPage;
