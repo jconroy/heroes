@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export default class HeroPreview extends React.Component {
-  render() {
-    return (
-      <Link to={`/hero/${this.props.id}`}>
-        <div className="hero-preview">
-          <img src={`img/${this.props.image}`} alt="" />
-          <h2 className="name">{this.props.name}</h2>
-        </div>
-      </Link>
-    );
-  }
+export default function HeroPreview(props) {
+  return (
+    <Link to={`/hero/${props.id}`}>
+      <div className="hero-preview">
+        <img src={`img/${props.image}`} alt="" />
+        <h2 className="name">{props.name}</h2>
+      </div>
+    </Link>
+  );
 }
