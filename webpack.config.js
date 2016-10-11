@@ -7,7 +7,7 @@ const path = require('path');
 
 module.exports = {
   devtool: debug ? 'inline-sourcemap' : null,
-  entry: path.join(__dirname, 'src', 'app-client.js'),
+  entry: path.join(__dirname, 'src', 'app-client.jsx'),
   devServer: {
     inline: true,
     port: 3333,
@@ -42,5 +42,8 @@ module.exports = {
       beautify: false,
       dead_code: true
     }),
-  ]
+  ],
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  }
 };

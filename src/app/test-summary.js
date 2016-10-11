@@ -1,6 +1,6 @@
 function TestSummary() {}
 
-TestSummary.prototype.getSubtotal = function() {
+TestSummary.prototype.getSubtotal = function getSubtotal() {
   return 0;
 };
 

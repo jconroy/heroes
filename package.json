@@ -2,15 +2,15 @@
   "name": "heroes",
   "version": "1.0.0",
   "description": "Simple application to showcase how to achieve universal rendering and routing with React and Express.",
-  "main": "src/server.js",
+  "main": "src/server.jsx",
   "repository": "git@github.com:jconroy/heroes.git",
   "scripts": {
-    "start": "NODE_ENV=production nodemon src/server.js --exec babel-node",
+    "start": "NODE_ENV=production nodemon src/server.jsx --exec babel-node",
     "start-dev": "npm run start-dev-hmr",
     "start-dev-single-page": "http-server src/static",
     "start-dev-hmr": "webpack-dev-server --progress --inline --hot",
     "build": "NODE_ENV=production webpack -p && babel src -d build --copy-files",
-    "serve": "node build/server.js",
+    "serve": "node build/server.jsx",
     "postinstall": "npm run build",
     "test": "./node_modules/mocha/bin/mocha && ./node_modules/.bin/eslint  --ext .js --ext .jsx src"
   },

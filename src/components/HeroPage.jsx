@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { Link } from 'react-router';
 import NotFoundPage from './NotFoundPage';
@@ -9,23 +7,23 @@ import heroes from '../data/heroes';
 export default class HeroPage extends React.Component {
   render() {
     const id = this.props.params.id;
-    const hero = heroes.filter((hero) => hero.id === id)[0];
+    const hero = heroes.filter(hero => hero.id === id)[0];
     if (!hero) {
-      return <NotFoundPage/>;
+      return <NotFoundPage />;
     }
     const headerStyle = { backgroundImage: `url(/img/${hero.cover})` };
     return (
       <div className="hero-full">
-        <HeroesMenu/>
+        <HeroesMenu />
         <div className="hero">
-          <header style={headerStyle}/>
+          <header style={headerStyle} />
           <div className="picture-container">
-            <img src={`/img/${hero.image}`}/>
+            <img src={`/img/${hero.image}`} alt="" />
             <h2 className="name">{hero.name}</h2>
           </div>
           <section className="description">
             <p>First appeared in <strong>{hero.first_appearance}</strong>.</p>
-            <p>Find out more at the <a href={hero.link} target="_blank">Marvel Universe Wiki</a>.</p>
+            <p>Find out more at the <a href={hero.link} target="_blank" rel="noopener noreferrer">Marvel Universe Wiki</a>.</p>
           </section>
         </div>
         <div className="navigateBack">
